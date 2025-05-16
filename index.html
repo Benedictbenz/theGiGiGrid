@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gigi Grid</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--background-->
+    <video height="100vh" autoplay loop playsinline muted volume="0.013" id="background-video">
+        <source src="./Videos/80 Gigi Murins sing September.mp4" type="video/mp4">;
+    </video>
+    <div class="container">
+
+    <!--header-->
+    <div>
+        <h1>
+            The Gigi Grid
+        </h1>
+    </div>
+    <!--The gigi Grid-->
+    <div id="gigicontainer">
+    </div>
+
+    </div>
+
+
+    <!--Script-->
+    <script>
+        const container = document.getElementById("gigicontainer");
+        for(let i=0; i<80; i++){
+
+            //creates an element
+            const div = document.createElement("div");
+            const video = document.createElement("video");
+
+            //sets up for video element
+            video.setAttribute("autoplay","");
+            video.setAttribute("loop","");
+            video.setAttribute("playsinline","");
+            video.setAttribute("muted","");
+            video.volume = 0.012;
+            video.style.width = "150px";
+
+
+            //sets up for source element
+            const source = document.createElement("source");
+            source.src = "./Videos/80 Gigi Murins sing September.mp4";
+            source.type = "video/mp4";
+
+            //Places it inside
+            video.appendChild(source);
+            div.appendChild(video);
+            container.appendChild(div);
+        }
+
+
+    </script>
+
+</body>
+</html>

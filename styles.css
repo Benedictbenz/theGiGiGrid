@@ -1,0 +1,31 @@
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1{
+    background-color: orange;
+    display: flex;
+    
+}
+
+#gigicontainer{
+    height: 100vh;
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(8,1fr);
+}
+
+/* Background video */
+#background-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
